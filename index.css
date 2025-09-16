@@ -1,8 +1,6 @@
 .section-container,
 .header-content {
-    /* max-width: 1280px; */
     max-width: 1300px;
-    min-width: 900px;
     width: 65%;
     margin: auto;
 }
@@ -107,4 +105,31 @@ li.active {
 
 .section-item .row li {
     line-height: 32px;
+}
+
+/* ---------- 响应式适配手机 ---------- */
+@media (max-width: 900px) {
+    .section-container,
+    .header-content {
+        width: 95%;     /* 小屏铺满 */
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    .header-logo {
+        font-size: 22px;
+    }
+
+    .section-item h3 {
+        font-size: 20px;
+    }
+
+    .section-item h4 {
+        font-size: 16px;
+    }
+
+    .home-header {
+        height: 60px;
+        line-height: 60px;
+    }
 }
