@@ -58,3 +58,20 @@ function scrollHighLight() {
 }
 
 scrollHighLight()
+
+// Lightweight visitor location display. The site stays fully static and the
+// request fails silently if a visitor blocks third-party services.
+fetch('https://ipwho.is/')
+    .then(function(response) {
+        if (!response.ok) throw new Error('Location lookup failed')
+        return response.json()
+    })
+    .then(function(location) {
+        var country = location && location.success !== false ? location.country : ''
+        document.getElementById('visitor-country').textContent = country
+            ? 'Visitor country: ' + country
+            : 'Visitor country: unavailable'
+    })
+    .catch(function() {
+        document.getElementById('visitor-country').textContent = 'Visitor country: unavailable'
+    })
