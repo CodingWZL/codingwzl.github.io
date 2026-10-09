@@ -1,4 +1,14 @@
 .section-container,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    color: #202124;
+    background: #fff;
+}
+
+.section-container,
 .header-content {
     max-width: 1600px;
     min-width: 1200px;
@@ -29,8 +39,8 @@
 }
 
 .header-logo {
-    font-family: cursive;
-    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
     font-size: 30px;
 }
 
@@ -45,7 +55,7 @@ li.active {
 
 .section-container {
     margin-top: 100px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 18px;
 }
 
@@ -89,7 +99,90 @@ li.active {
 }
 
 .research-section .row {
-    margin-top: 24px !important;
+    margin-top: 0 !important;
+}
+
+/* Publications: every paper uses the same image area and spacing. */
+#publications .research-section > .row {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+    padding: 28px 0;
+    border-bottom: 1px solid #eceff1;
+}
+
+#publications .research-section > .row:last-child {
+    border-bottom: 0;
+}
+
+#publications .research-section > .row > [class*="col-"] {
+    width: auto;
+    max-width: none;
+    padding: 0;
+}
+
+#publications .research-section > .row > [class*="col-"]:first-child {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid #e3e8ec;
+    border-radius: 6px;
+    background: #f8fafb;
+}
+
+#publications .research-section > .row img {
+    width: 100% !important;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+#publications h4 {
+    margin: 0 0 10px;
+    line-height: 1.35;
+    font-weight: 700;
+    color: #17202a;
+}
+
+#publications .author span[style*="teal"] {
+    color: #007f7f !important;
+    font-weight: 700 !important;
+}
+
+#publications .link-list > span:first-child {
+    font-weight: 700 !important;
+    color: #8a1c1c;
+}
+
+.site-footer {
+    max-width: 1600px;
+    min-width: 1200px;
+    width: 75%;
+    margin: 0 auto;
+    padding: 28px 0 36px;
+    color: #687078;
+    font-size: 14px;
+    text-align: center;
+}
+
+.visitor-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.visitor-count {
+    height: 20px;
+    vertical-align: middle;
+}
+
+.visitor-separator {
+    color: #b6bcc2;
 }
 
 .research-section .author {
@@ -132,5 +225,19 @@ li.active {
     .home-header {
         height: 60px;
         line-height: 60px;
+    }
+
+    #publications .research-section > .row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    #publications .research-section > .row > [class*="col-"]:first-child {
+        height: 220px;
+    }
+
+    .site-footer {
+        width: 92%;
+        min-width: auto;
     }
 }
