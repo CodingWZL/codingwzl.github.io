@@ -59,6 +59,11 @@ li.active {
     font-size: 18px;
 }
 
+/* Make author-selected inline emphasis visibly bold with Arial. */
+.section-container span[style*="font-weight: 500"] {
+    font-weight: 700 !important;
+}
+
 .section-container p {
     text-align: justify;
 }
