@@ -107,6 +107,32 @@ li.active {
     margin-top: 0 !important;
 }
 
+/* Featured journal covers between Research and News. */
+.cover-showcase {
+    padding: 26px 0 30px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.cover-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 24px;
+    align-items: end;
+}
+
+.cover-gallery figure {
+    margin: 0;
+}
+
+.cover-gallery img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #e0e3e7;
+    box-shadow: 0 3px 12px rgba(23, 32, 42, 0.12);
+}
+
 /* Publications: every paper uses the same image area and spacing. */
 #publications .research-section > .row {
     display: grid;
