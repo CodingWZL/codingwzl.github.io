@@ -963,14 +963,15 @@
     <footer class="site-footer" aria-label="Website statistics">
         <div class="visitor-stats">
             <span>Website visits</span>
-            <img class="visitor-count"
-                 src="https://visitor-badge.laobi.icu/badge?page_id=codingwzl.github.io&left_text=views"
-                 alt="Website visit count"
-                 loading="lazy">
+            <img id="visitor-count" class="visitor-count"
+                 data-counter-url="https://visitor-badge.laobi.icu/badge?page_id=codingwzl.github.io&amp;left_text=views"
+                 alt="Website visit count: loading"
+                 loading="eager">
             <span class="visitor-separator" aria-hidden="true">·</span>
             <span id="visitor-country">Visitor country: detecting…</span>
         </div>
     </footer>
+    <script src="./visitor-counter.js?v=20261109"></script>
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
